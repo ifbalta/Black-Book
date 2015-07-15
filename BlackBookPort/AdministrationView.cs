@@ -27,5 +27,11 @@ namespace BlackBookPort
         {
             this.Close();
         }
+
+        private void btnViewProduct_Click(object sender, EventArgs e)
+        {
+            ViewProducts viewProducts = new ViewProducts();
+            viewProducts.Show();
+        }
     }
 }

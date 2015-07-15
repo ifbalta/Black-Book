@@ -62,6 +62,7 @@
             this.btnViewProduct.TabIndex = 2;
             this.btnViewProduct.Text = "View Products";
             this.btnViewProduct.UseVisualStyleBackColor = true;
+            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
             // 
             // btnExit
             // 
