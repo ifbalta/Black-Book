@@ -22,10 +22,13 @@ namespace BlackBookPort
         private void saveProduct(object sender, EventArgs e)
         {
 
-            Product product = new Product(txtID.Text,
-                txtName.Text, txtDescription.Text, 
-                comboCategory.Text, Double.Parse(txtPrice.Text), 
-                 int.Parse(txtQuantity.Text));
+            Product product = new Product();
+            product.ID = txtID.Text;
+            product.Name = txtName.Text;
+            product.Description = txtDescription.Text;
+            product.Category = comboCategory.Text;
+            product.Price = Double.Parse(txtPrice.Text);
+            product.Quantity = int.Parse(txtQuantity.Text);
             Console.WriteLine(product);
         }
 
