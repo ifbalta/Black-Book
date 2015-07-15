@@ -8,5 +8,6 @@ namespace BlackBookPort
 {
     class Person
     {
+        private String name;
     }
 }
