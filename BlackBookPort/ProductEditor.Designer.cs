@@ -1,6 +1,6 @@
 ﻿namespace BlackBookPort
 {
-    partial class Form1
+    partial class ProductEditor
     {
         /// <summary>
         /// Required designer variable.
@@ -182,6 +182,7 @@
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // comboCategory
             // 
@@ -191,7 +192,7 @@
             this.comboCategory.Size = new System.Drawing.Size(121, 21);
             this.comboCategory.TabIndex = 15;
             // 
-            // Form1
+            // ProductEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,7 +212,7 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.labelID);
-            this.Name = "Form1";
+            this.Name = "ProductEditor";
             this.Text = "Black Book";
             this.ResumeLayout(false);
             this.PerformLayout();

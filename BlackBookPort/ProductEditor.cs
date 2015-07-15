@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BlackBookPort
 {
-    public partial class Form1 : Form
+    public partial class ProductEditor : Form
     {
-        public Form1()
+        public ProductEditor()
         {
             InitializeComponent();
         }
@@ -27,6 +27,11 @@ namespace BlackBookPort
                 comboCategory.Text, Double.Parse(txtPrice.Text), 
                  int.Parse(txtQuantity.Text));
             Console.WriteLine(product);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
