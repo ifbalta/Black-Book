@@ -6,8 +6,27 @@ using System.Threading.Tasks;
 
 namespace BlackBookPort
 {
-    class Person
+        /**
+            Product Domain Object
+         */
+    class Product
     {
+        private String id;
         private String name;
+        private String description;
+        private String category;
+        private Double price;
+        private int quantity;
+
+        public Product(String id, String name, String description, String category, Double price, int quantity ) 
+        {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.category = category;
+            this.price = price;
+            this.quantity = quantity;
+        }
+
     }
 }

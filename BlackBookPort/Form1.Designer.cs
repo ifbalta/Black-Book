@@ -35,7 +35,6 @@
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCategory = new System.Windows.Forms.TextBox();
             this.labelCategory = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.labelQuantity = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelID
@@ -114,13 +114,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Product Editor";
             // 
-            // txtCategory
-            // 
-            this.txtCategory.Location = new System.Drawing.Point(125, 163);
-            this.txtCategory.Name = "txtCategory";
-            this.txtCategory.Size = new System.Drawing.Size(126, 20);
-            this.txtCategory.TabIndex = 8;
-            // 
             // labelCategory
             // 
             this.labelCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -190,18 +183,26 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // comboCategory
+            // 
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(125, 162);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(121, 21);
+            this.comboCategory.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 281);
+            this.Controls.Add(this.comboCategory);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.labelQuantity);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescription);
@@ -226,7 +227,6 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label labelPrice;
@@ -234,6 +234,7 @@
         private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox comboCategory;
     }
 }
 

@@ -24,11 +24,14 @@ namespace BlackBookPort
             String id = txtID.Text;
             String name = txtName.Text;
             String description = txtDescription.Text;
-            String price = txtPrice.Text;
-            String quantity = txtQuantity.Text;
+            String category = comboCategory.Text;
+            Double price = Double.Parse(txtPrice.Text);
+            int quantity = int.Parse(txtQuantity.Text);
+
+            Product product = new Product(id, name, description, category, price, quantity);
 
             Console.WriteLine("id {0}\nname:{1}\ndescription:{1}", id, name, description);
-            Console.WriteLine("price: {0}\nquantity:{1}\n", price, quantity);
+            Console.WriteLine("price: {0}\nquantity:{1}\ncategory: {2}", price, quantity, category);
         }
     }
 }
