@@ -29,8 +29,7 @@ namespace BlackBookPort
         }
 
         public override String ToString() {
-            return String.Format("id: {0}\nname:{1}\ndescription:{2}\nprice: {3}\nquantity:{4}\ncategory: {5}",
-                id, name, description, price, quantity, category);
+            return String.Format("{0} {1}",id, name);
         }
 
     }
