@@ -17,34 +17,18 @@ namespace BlackBookPort
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+
+
+        private void saveProduct(object sender, EventArgs e)
         {
+            String id = txtID.Text;
+            String name = txtName.Text;
+            String description = txtDescription.Text;
+            String price = txtPrice.Text;
+            String quantity = txtQuantity.Text;
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            Console.WriteLine("id {0}\nname:{1}\ndescription:{1}", id, name, description);
+            Console.WriteLine("price: {0}\nquantity:{1}\n", price, quantity);
         }
     }
 }

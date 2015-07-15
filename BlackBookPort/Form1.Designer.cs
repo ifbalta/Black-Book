@@ -30,7 +30,7 @@
         {
             this.labelID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtProduct = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -47,12 +47,15 @@
             // 
             // labelID
             // 
+            this.labelID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelID.AutoSize = true;
+            this.labelID.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelID.Location = new System.Drawing.Point(37, 50);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(18, 13);
             this.labelID.TabIndex = 0;
             this.labelID.Text = "ID";
+            this.labelID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtID
             // 
@@ -60,25 +63,25 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(126, 20);
             this.txtID.TabIndex = 1;
-            this.txtID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txtProduct
+            // txtName
             // 
-            this.txtProduct.Location = new System.Drawing.Point(125, 73);
-            this.txtProduct.Name = "txtProduct";
-            this.txtProduct.Size = new System.Drawing.Size(126, 20);
-            this.txtProduct.TabIndex = 3;
-            this.txtProduct.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.txtName.Location = new System.Drawing.Point(125, 73);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(126, 20);
+            this.txtName.TabIndex = 3;
             // 
             // labelName
             // 
+            this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelName.AutoSize = true;
+            this.labelName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelName.Location = new System.Drawing.Point(37, 76);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 2;
             this.labelName.Text = "Name";
-            this.labelName.Click += new System.EventHandler(this.label2_Click);
+            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDescription
             // 
@@ -88,17 +91,18 @@
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescription.Size = new System.Drawing.Size(126, 58);
             this.txtDescription.TabIndex = 5;
-            this.txtDescription.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
             // 
             // labelDescription
             // 
+            this.labelDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDescription.AutoSize = true;
+            this.labelDescription.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelDescription.Location = new System.Drawing.Point(37, 102);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(60, 13);
             this.labelDescription.TabIndex = 4;
             this.labelDescription.Text = "Description";
-            this.labelDescription.Click += new System.EventHandler(this.label3_Click);
+            this.labelDescription.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -119,12 +123,15 @@
             // 
             // labelCategory
             // 
+            this.labelCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCategory.AutoSize = true;
+            this.labelCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelCategory.Location = new System.Drawing.Point(37, 170);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(49, 13);
             this.labelCategory.TabIndex = 7;
             this.labelCategory.Text = "Category";
+            this.labelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPrice
             // 
@@ -135,12 +142,15 @@
             // 
             // labelPrice
             // 
+            this.labelPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrice.AutoSize = true;
+            this.labelPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelPrice.Location = new System.Drawing.Point(37, 196);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(31, 13);
             this.labelPrice.TabIndex = 9;
             this.labelPrice.Text = "Price";
+            this.labelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtQuantity
             // 
@@ -151,13 +161,15 @@
             // 
             // labelQuantity
             // 
+            this.labelQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelQuantity.AutoSize = true;
+            this.labelQuantity.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelQuantity.Location = new System.Drawing.Point(37, 222);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(88, 13);
             this.labelQuantity.TabIndex = 11;
             this.labelQuantity.Text = "Quantity in Stock";
-            this.labelQuantity.Click += new System.EventHandler(this.label7_Click);
+            this.labelQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnSave
             // 
@@ -167,6 +179,7 @@
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.saveProduct);
             // 
             // btnCancel
             // 
@@ -193,7 +206,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.labelDescription);
-            this.Controls.Add(this.txtProduct);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.labelID);
@@ -208,7 +221,7 @@
 
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtProduct;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label labelDescription;
