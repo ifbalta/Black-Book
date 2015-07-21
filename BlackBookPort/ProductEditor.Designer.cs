@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -43,6 +44,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.comboCategory = new System.Windows.Forms.ComboBox();
+            this.blackBookDataSet = new BlackBookPort.BlackBookDataSet();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productTableAdapter = new BlackBookPort.BlackBookDataSetTableAdapters.ProductTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.blackBookDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelID
@@ -186,11 +192,27 @@
             // 
             // comboCategory
             // 
+            this.comboCategory.DataSource = this.productBindingSource;
+            this.comboCategory.DisplayMember = "Category";
             this.comboCategory.FormattingEnabled = true;
             this.comboCategory.Location = new System.Drawing.Point(125, 162);
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(121, 21);
             this.comboCategory.TabIndex = 15;
+            // 
+            // blackBookDataSet
+            // 
+            this.blackBookDataSet.DataSetName = "BlackBookDataSet";
+            this.blackBookDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            this.productBindingSource.DataSource = this.blackBookDataSet;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // ProductEditor
             // 
@@ -214,6 +236,9 @@
             this.Controls.Add(this.labelID);
             this.Name = "ProductEditor";
             this.Text = "Black Book";
+            this.Load += new System.EventHandler(this.ProductEditor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.blackBookDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +261,9 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox comboCategory;
+        private BlackBookDataSet blackBookDataSet;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private BlackBookDataSetTableAdapters.ProductTableAdapter productTableAdapter;
     }
 }
 

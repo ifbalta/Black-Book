@@ -61,8 +61,8 @@
   <ItemGroup>
     <Build Include="Product.sql" />
     <Build Include="Customer.sql" />
-    <Build Include="Order.sql" />
     <Build Include="OrderItem.sql" />
+    <Build Include="Order.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BlackBookDB.refactorlog" />
