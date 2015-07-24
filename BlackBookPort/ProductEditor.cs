@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BlackBookPort.dao;
 namespace BlackBookPort
 {
     public partial class ProductEditor : Form
     {
+        ProductDAO productDao;
         public ProductEditor()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace BlackBookPort
 
         private void saveProduct(object sender, EventArgs e)
         {
-
+            
             Product product = new Product();
             product.ID = txtID.Text;
             product.Name = txtName.Text;
@@ -29,6 +30,8 @@ namespace BlackBookPort
             product.Category = comboCategory.Text;
             product.Price = Double.Parse(txtPrice.Text);
             product.Quantity = int.Parse(txtQuantity.Text);
+            productDao = new ProductDAO();
+            productDao.save(product);
             Console.WriteLine(product);
         }
 
