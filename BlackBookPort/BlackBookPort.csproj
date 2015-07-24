@@ -70,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BlackBookDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dao\ProductDAO.cs" />
     <Compile Include="domain\Customer.cs" />
     <Compile Include="domain\Order.cs" />
     <Compile Include="domain\OrderItem.cs" />
