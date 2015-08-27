@@ -18,12 +18,13 @@ namespace BlackBookPort.dao
             con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=""C:\Users\Isabel\documents\visual studio 2013\Projects\BlackBookPort\BlackBookPort\BlackBookDB.mdf"";Integrated Security=True");
             con.Open();
             cmd = new SqlCommand("INSERT INTO Product (Product_ID,Name,Description,Category,Quantity_In_Stock,Price) VALUES (@Product_ID,@Name,@Description,@Category,@Quantity_In_Stock,@Price)");
-            cmd.Parameters.Add("@Product_ID", product.ID);
-            cmd.Parameters.Add("@Name", product.Name);
-            cmd.Parameters.Add("@Description", product.Description);
-            cmd.Parameters.Add("@Category", product.Category);
-            cmd.Parameters.Add("@Quantity_In_Stock", product.Quantity);
-            cmd.Parameters.Add("@Price", product.Price);
+            cmd.Parameters.AddWithValue("@Product_ID", product.ID);
+            cmd.Parameters.AddWithValue("@Name", product.Name);
+            cmd.Parameters.AddWithValue("@Description", product.Description);
+            cmd.Parameters.AddWithValue("@Category", product.Category);
+            cmd.Parameters.AddWithValue("@Quantity_In_Stock", product.Quantity);
+            cmd.Parameters.AddWithValue("@Price", product.Price);
+            cmd.Connection = con;
             cmd.ExecuteNonQuery();
         }
     }
