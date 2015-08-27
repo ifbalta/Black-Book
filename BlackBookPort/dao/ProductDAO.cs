@@ -26,6 +26,7 @@ namespace BlackBookPort.dao
             cmd.Parameters.AddWithValue("@Price", product.Price);
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
+            con.Close();
         }
     }
 }
